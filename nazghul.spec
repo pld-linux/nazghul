@@ -4,12 +4,12 @@
 Summary:	Ultima V game engine clone with enhanced features
 Summary(pl.UTF-8):	Gra oparata o ulepszony silnik Ultimy V
 Name:		nazghul
-Version:	0.6.1
+Version:	0.7.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/nazghul/%{name}-%{version}.tar.gz
-# Source0-md5:	31124e50405e30d110652ddf0a6f40ef
+# Source0-md5:	3a3b08ee180163030bc9934d6fb40de8
 Patch0:		%{name}-default_cfg.patch
 URL:		http://myweb.cableone.net/gmcnutt/nazghul.html
 BuildRequires:	SDL_image-devel >= 1.2
