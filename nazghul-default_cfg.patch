@@ -1,24 +1,26 @@
---- nazghul-0.6.1/src/nazghul.c~	2008-11-09 04:07:45.000000000 +0100
-+++ nazghul-0.6.1/src/nazghul.c	2008-12-05 10:35:45.000000000 +0100
-@@ -297,6 +297,8 @@
-         cfg_set("splash-image-filename", "splash.png");
-         cfg_set("screen-dims", "1280x960" /*"640x480"*/);
+--- nazghul-0.7.0/src/nazghul.c~	2008-11-09 22:55:33.000000000 +0000
++++ nazghul-0.7.0/src/nazghul.c	2009-10-19 13:20:35.000000000 +0000
+@@ -303,6 +303,8 @@
          cfg_set("sound-enabled", "yes");
+         cfg_set("music-volume", "100%");
+         cfg_set("keyword-highlighting", "yes");
 +	cfg_set("include-dirname", "/usr/share/nazghul/haxima");
 +	cfg_set("saved-games-dirname", "$HOME/.nazghul/haxima");
  }
  
  int main(int argc, char **argv)
---- nazghul-0.6.1/worlds/haxima-1.002/Makefile.am~	2008-11-09 04:07:47.000000000 +0100
-+++ nazghul-0.6.1/worlds/haxima-1.002/Makefile.am	2008-12-05 12:03:53.000000000 +0100
-@@ -1,10 +1,4 @@
+--- nazghul-0.7.0/worlds/haxima-1.002/Makefile.am~	2008-05-10 15:53:11.000000000 +0000
++++ nazghul-0.7.0/worlds/haxima-1.002/Makefile.am	2009-10-19 13:22:32.000000000 +0000
+@@ -1,12 +1,6 @@
  haximadir   = $(datadir)/nazghul/haxima
 -bin_SCRIPTS = haxima.sh
 -CLEANFILES = haxima.sh
--
+ SUBDIRS = music
+ 
 -haxima.sh: Makefile
 -	echo '#!/bin/sh' > $@ 
 -	echo '"@bindir@/nazghul" -I "@datadir@/nazghul/haxima" -G "$$HOME/.haxima" "$$@"' >> $@
- 
+-
  haxima_DATA = $(wildcard *.scm) $(wildcard *.png) $(wildcard *.wav)
  
+ EXTRA_DIST = $(haxima_DATA)
