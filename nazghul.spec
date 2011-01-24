@@ -13,9 +13,11 @@ Source0:	http://downloads.sourceforge.net/nazghul/%{name}-%{version}.tar.gz
 Patch0:		%{name}-default_cfg.patch
 URL:		http://myweb.cableone.net/gmcnutt/nazghul.html
 BuildRequires:	SDL_image-devel >= 1.2
+BuildRequires:	SDL_mixer-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libpng-devel
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
